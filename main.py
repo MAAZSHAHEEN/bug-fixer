@@ -4,7 +4,11 @@ from fastapi import FastAPI
 from model import BugReport
 from service import get_ai_fix
 
-app = FastAPI()
+app = FastAPI(
+    title="Bug Fixer API",
+    description="AI-powered Python bug fixing with self-healing retry loop and AST validation",
+    version="1.0.0"
+)
 
 @app.post("/fix")
 def repair_bug(report: BugReport):
