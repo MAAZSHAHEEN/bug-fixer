@@ -3,8 +3,8 @@
 An AI-powered developer tool that automatically detects and repairs Python syntax errors using Google's Gemini AI, validating every fix with AST parsing before applying it.
 
 ## Live API
-- **Base URL:** `http://3.21.35.40`
-- **Interactive Docs:** `http://3.21.35.40/docs`
+- **Base URL:** `https://bug-fixer.fastapicloud.dev`
+- **Interactive Docs:** `https://bug-fixer.fastapicloud.dev/docs`
 
 ## Tech Stack
 - **FastAPI** — REST API framework
