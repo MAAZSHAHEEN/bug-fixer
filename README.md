@@ -2,6 +2,16 @@
 
 An AI-powered developer tool that automatically detects and repairs Python syntax errors using Google's Gemini AI, validating every fix with AST parsing before applying it.
 
+## ⚠️ Security limitation
+
+**This is a prototype. Do not expose it publicly.**
+
+- The `/fix` endpoint reads and overwrites whatever server file path the client sends in `file_path`. It does not restrict paths to a project directory, so any caller can read (the original code is returned in the response) and overwrite arbitrary files the server process can access, and it also writes a `.bak` copy next to them.
+- There is no authentication or authorization on any endpoint.
+- Run it only locally, on a machine and files you control. Do not deploy it to a public host.
+
+The deployment URLs listed below are not currently online (they returned 404 / timed out when checked on 2026-10-30).
+
 ## Live API
 - **Base URL:** `https://bug-fixer.fastapicloud.dev`
 - **Interactive Docs:** `https://bug-fixer.fastapicloud.dev/docs`
